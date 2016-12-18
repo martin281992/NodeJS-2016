@@ -79,4 +79,5 @@ Ahora con el siguiente código leeremos el archivo y rescataremos el contenido d
 		console.log(config.nombre_usuario);
 
 		console.log(config.nacionalidad);
-´´´
+
+```
