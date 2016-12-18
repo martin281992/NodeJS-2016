@@ -7,17 +7,17 @@
 Primer paso será requerir el modulo fileSystem para poder utilizarlo con **`require`**.
 
 ```js
-	const fs = require("fs");
-	let texto = " utilizando el modulo FS"
+		const fs = require("fs");
+		let texto = " utilizando el modulo FS"
 
-	fs.writeFile("nombre-archivo.txt", texto, (err)=>{
-		if(err){
-			throw err;
-		}
-		else{
-			console.log("archivo creado")
-		}
-		})
+		fs.writeFile("nombre-archivo.txt", texto, (err)=>{
+			if(err){
+				throw err;
+			}
+			else{
+				console.log("archivo creado")
+			}
+			})
 ```
 
 En `fs.writeFile` le pasamos el nombre del archivo a crear, el texto que incluirá y una función.
@@ -30,7 +30,7 @@ Para abrir un archivo existente utilizamos del modulo fileSystem `appendFile` co
 
 		const fs = require("fs");
 
-		var nuevoTexto = " \n curso por diseño diseño";
+		let nuevoTexto = " \n curso por diseño diseño";
 
 		fs.appendFile("./archivo", nuevoTexto, (err)=> {
 			if(err){
@@ -51,3 +51,32 @@ Para abrir un archivo existente utilizamos del modulo fileSystem `appendFile` co
 		}) // fin appendFile
 ```
 Para leer el archivo utilizamos del modulo fileSystem `readFile` con 3 parametros: el archivo en cuestión, el formato de codificación UTF-8 y una función, si el archivo no existe lo crea.
+
+### Leer archivo JSON de manera sincrona, en node debemos aprender el concepto de lo que es sincrono y asincrono, lo veremos más adelante.
+
+Veremos como abriremos un archivo JSON lo parsearemos y rescataremos alguno de sus valores para enseñarlos por consola.
+
+El archivo será el siguiente `archivo.json`
+```
+	{
+	"nombre": "martin",
+	"apellido": "berkhoff",
+	"nombre_usuario": "comunidad_node_js",
+	"nacionalidad": "chileno"
+	}
+```
+Ahora con el siguiente código leeremos el archivo y rescataremos el contenido de el
+
+```js
+
+		let fs = require("fs"),
+		contenido = fs.readFileSync("archivo/config.json", "UTF-8");
+
+		console.log(contenido);
+
+		let config = JSON.parse(contenido);
+
+		console.log(config.nombre_usuario);
+
+		console.log(config.nacionalidad);
+´´´
