@@ -52,8 +52,9 @@ Para abrir un archivo existente utilizamos del modulo fileSystem `appendFile` co
 ```
 Para leer el archivo utilizamos del modulo fileSystem `readFile` con 3 parametros: el archivo en cuestión, el formato de codificación UTF-8 y una función, si el archivo no existe lo crea.
 
-### Leer archivo JSON de manera sincrona, en node debemos aprender el concepto de lo que es sincrono y asincrono, lo veremos más adelante.
+### Leer archivo JSON de manera sincrona`.
 
+En node debemos aprender el concepto de lo que es sincrono y asincrono, lo veremos más adelante.
 Veremos como abriremos un archivo JSON lo parsearemos y rescataremos alguno de sus valores para enseñarlos por consola.
 
 El archivo será el siguiente `archivo.json`
