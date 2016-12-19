@@ -1,5 +1,24 @@
 # NodeJS 2016 practicas y apuntes
 
+## Primeros pasos con nodeJS
+
+### Instalación
+
+Lo primero que tenemos que hacer es instalar node desde la página oficial **[NodeJS web Oficial](https://nodejs.org/es/ "click")**.
+
+Instala la versión estable de nodeJS, cuando descargamos nodeJS estarás instalando enseguida NPM node package manager o gestor de paquetes de node, este nos servirá para instalar X cotenido que decidamos utilizar con node.
+
+Como siempre digo si trabajas en window te recomiendo utilizar Git Bash para emular los comandos linux, este nos proveerá de una consola.
+
+**[Descargar git bash](https://git-scm.com/downloads "click")**
+
+Una vez instalado git bash utilizamos los siguientes comandos para ver las versiones:
+
+```	
+	node --version
+	npm  --version
+````
+
 ## Modulo FileSystem
 
 ### Crear un archivo
