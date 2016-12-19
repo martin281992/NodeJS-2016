@@ -106,7 +106,7 @@ Ahora con el siguiente código leeremos el archivo y rescataremos el contenido d
 
 Cuando utilizamos el readdir lo podemos hacer de dos maneras sincronamente `readdirSync` o  asincronamente  `readdir` con este ejemplo entenderemos más o menos el funcionamiento de node, en este caso al utilizar `readdir` ejecutará la lectura del directorio y se lanzará la respuesta cuando termine de ejecutarse la callback `(err, archivos) => {...}` a continuación de la lectura estaremos enviando un mensaje `console.log("mensaje mensaje")` este se lanzará primero y no en **cascada** como pensamos... eso es por el funcionamiento asincrono que nos provee nodeJS.
 
-```
+```js
 
 		const  fs = require("fs");
 
@@ -120,7 +120,6 @@ Cuando utilizamos el readdir lo podemos hacer de dos maneras sincronamente `read
 		})
 
 		console.log("mensaje mensaje")
-
 ```
 
 
