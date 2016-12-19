@@ -41,6 +41,32 @@ Primer paso será requerir el modulo fileSystem para poder utilizarlo con **`req
 
 En `fs.writeFile` le pasamos el nombre del archivo a crear, el texto que incluirá y una función.
 
+### Creación de carpeta y validación de su existencia.
+
+El metodo `mkdir` es el que nos creará la carpeta, el metodo access nos permite si podemos acceder a un directorio, carpeta o archivo. 
+Ambos reciben una callback para ver si tenemos error o no y cómo proceder.
+
+```js
+
+		var fs = require("fs");
+		fs.access("test", (err) {
+			if(err){ // si no existe la carpeta la crea
+			fs.mkdir("test", (err) {
+				if(err){
+				throw err;
+					}else{
+					console.log("la carpeta fue creada");
+						}
+				})
+			}else{ // si existe la podemos acceder
+				console.log("la carpeta ya existe")
+
+			}
+		})
+
+
+```
+
 ### Abrir un archivo y leer el contenido
 
 Para abrir un archivo existente utilizamos del modulo fileSystem `appendFile` con la ruta del archivo, el texto que contendrá  y una función
