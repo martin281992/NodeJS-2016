@@ -52,7 +52,7 @@ Para abrir un archivo existente utilizamos del modulo fileSystem `appendFile` co
 ```
 Para leer el archivo utilizamos del modulo fileSystem `readFile` con 3 parametros: el archivo en cuestión, el formato de codificación UTF-8 y una función, si el archivo no existe lo crea.
 
-### Leer archivo JSON de manera sincrona`.
+### Leer archivo JSON de manera sincrona.
 
 En node debemos aprender el concepto de lo que es sincrono y asincrono, lo veremos más adelante.
 Veremos como abriremos un archivo JSON lo parsearemos y rescataremos alguno de sus valores para enseñarlos por consola.
@@ -80,5 +80,29 @@ Ahora con el siguiente código leeremos el archivo y rescataremos el contenido d
 		console.log(config.nombre_usuario);
 
 		console.log(config.nacionalidad);
+
+```
+
+
+### Borrar archivo
+
+Para borrar archivos debemos requerir el modulo fileSystem, utilizar **unlink** para borrar archivos y despues le pasamos una arrow function para ver si tenemos un error.
+
+```js
+
+		const fs = require("fs");
+
+		fs.unlink("test/text.txt", (err)=> {
+
+			if(err){
+				throw err;
+			}
+			else{
+				console.log("archivo borrado");
+			}
+		})
+
+
+
 
 ```
