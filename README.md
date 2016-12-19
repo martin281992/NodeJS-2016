@@ -23,7 +23,7 @@ Una vez instalado git bash utilizamos los siguientes comandos para ver las versi
 
 ### Crear un archivo
 
-Primer paso será requerir el modulo fileSystem para poder utilizarlo con **`require`**.
+Primer paso será requerir el modulo fileSystem para poder utilizarlo con **`require`** y escribiremos sobre el archivo creado con `writeFile`:
 
 ```js
 		const fs = require("fs");
@@ -140,4 +140,33 @@ Para borrar archivos debemos requerir el modulo fileSystem, utilizar **unlink** 
 				console.log("archivo borrado");
 			}
 		})
+```
+
+### Stream 
+
+Un stream es un flujo de información de datos podemos leer un stream con el siguiente código:
+
+```js
+
+		const fs = require("fs");
+
+		let total = "",
+		stream = fs.createReadStream("archivos/archivo.txt");
+
+
+
+		stream.on("data", (segmento)=>{
+			console.log(segmento.length);
+			total += segmento;
+
+			stream.pause();
+			stream.resume();
+		})
+
+
+		stream.on("end", ()=>{
+			console.log("El tamaño total del archivo es: " + total.length);
+
+		})
+
 ```
