@@ -140,8 +140,4 @@ Para borrar archivos debemos requerir el modulo fileSystem, utilizar **unlink** 
 				console.log("archivo borrado");
 			}
 		})
-
-
-
-
 ```
