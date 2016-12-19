@@ -144,16 +144,13 @@ Para borrar archivos debemos requerir el modulo fileSystem, utilizar **unlink** 
 
 ### Stream 
 
-Un stream es un flujo de información de datos podemos leer un stream con el siguiente código:
+Un stream es un flujo de información o un flujo de datos, podemos leer un stream con el siguiente código:
 
 ```js
-
 		const fs = require("fs");
 
 		let total = "",
 		stream = fs.createReadStream("archivos/archivo.txt");
-
-
 
 		stream.on("data", (segmento)=>{
 			console.log(segmento.length);
@@ -162,7 +159,6 @@ Un stream es un flujo de información de datos podemos leer un stream con el sig
 			stream.pause();
 			stream.resume();
 		})
-
 
 		stream.on("end", ()=>{
 			console.log("El tamaño total del archivo es: " + total.length);
