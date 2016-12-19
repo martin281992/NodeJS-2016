@@ -21,7 +21,7 @@ Una vez instalado git bash utilizamos los siguientes comandos para ver las versi
 
 ## Modulo FileSystem
 
-### Crear un archivo
+### Crear un archivo y escribir contenido en el
 
 Primer paso será requerir el modulo fileSystem para poder utilizarlo con **`require`** y escribiremos sobre el archivo creado con `writeFile`:
 
