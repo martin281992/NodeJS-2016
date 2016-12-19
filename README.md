@@ -70,7 +70,7 @@ Ahora con el siguiente código leeremos el archivo y rescataremos el contenido d
 
 ```js
 
-		let fs = require("fs"),
+		const fs = require("fs");
 		contenido = fs.readFileSync("archivo/config.json", "UTF-8");
 
 		console.log(contenido);
