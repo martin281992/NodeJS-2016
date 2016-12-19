@@ -49,9 +49,9 @@ Ambos reciben una callback para ver si tenemos error o no y cómo proceder.
 ```js
 
 		var fs = require("fs");
-		fs.access("test", (err) {
+		fs.access("test", (err)=> {
 			if(err){ // si no existe la carpeta la crea
-			fs.mkdir("test", (err) {
+			fs.mkdir("test", (err)=> {
 				if(err){
 				throw err;
 					}else{
