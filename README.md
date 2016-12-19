@@ -8,7 +8,7 @@ Lo primero que tenemos que hacer es instalar node desde la página oficial **[No
 
 Instala la versión estable de nodeJS, cuando descargamos nodeJS estarás instalando enseguida NPM node package manager o gestor de paquetes de node, este nos servirá para instalar X cotenido que decidamos utilizar con node.
 
-Como siempre digo si trabajas en window te recomiendo utilizar Git Bash para emular los comandos linux, este nos proveerá de una consola.
+Si trabajas en window te recomiendo utilizar Git Bash para emular los comandos linux, este nos proveerá de una consola.
 
 **[Descargar git bash](https://git-scm.com/downloads "click")**
 
@@ -99,6 +99,27 @@ Ahora con el siguiente código leeremos el archivo y rescataremos el contenido d
 		console.log(config.nombre_usuario);
 
 		console.log(config.nacionalidad);
+
+```
+
+### Leer directorio asincronamente
+
+Cuando utilizamos el readdir lo podemos hacer de dos maneras sincronamente `readdirSync` o  asincronamente  `readdir` con este ejemplo entenderemos más o menos el funcionamiento de node, en este caso al utilizar `readdir` ejecutará la lectura del directorio y se lanzará la respuesta cuando termine de ejecutarse la callback `(err, archivos) => {...}` a continuación de la lectura estaremos enviando un mensaje `console.log("mensaje mensaje")` este se lanzará primero y no en **cascada** como pensamos... eso es por el funcionamiento asincrono que nos provee nodeJS.
+
+```
+
+		const  fs = require("fs");
+
+		fs.readdir("./", (err, archivos)=> {
+			if(err){
+				throw err;
+
+			}else{
+				console.log(archivos)
+			}
+		})
+
+		console.log("mensaje mensaje")
 
 ```
 
