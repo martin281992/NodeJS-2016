@@ -2,7 +2,7 @@
  
 **Antes de comenzar con node te recomiendo repasar los siguientes contenidos** !important:
 
-1. **[JavaScript ES6](https://git-scm.com/downloads "click")**
+1. **[JavaScript ES6](https://github.com/martin281992/NodeJS-2016/blob/master/es6.md  "click")**
 
 **Te dejo tambien las dependencias y framework más populares con nodeJS** !important
 
