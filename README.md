@@ -1,8 +1,17 @@
 # NodeJS 2016 practicas y apuntes
+ 
+**Antes de comenzar con node te recomiendo repasar los siguientes contenidos** !important:
 
-## Primeros pasos con nodeJS
+1. **[JavaScript ES6](https://git-scm.com/downloads "click")**
 
-### Instalación
+**Te dejo tambien las dependencias y framework más populares con nodeJS** !important
+
+1. **[Express](https://git-scm.com/downloads "click")**
+2. **[socket.io](https://git-scm.com/downloads "click")**
+
+# Primeros pasos con nodeJS
+
+## Instalación
 
 Lo primero que tenemos que hacer es instalar node desde la página oficial **[NodeJS web Oficial](https://nodejs.org/es/ "click")**.
 
@@ -18,6 +27,31 @@ Una vez instalado git bash utilizamos los siguientes comandos para ver las versi
 	node --version
 	npm  --version
 ````
+
+# Comenzar un proyecto en nodeJS.
+
+Cuando queremos comenzar un proyecto en nodeJS tenemos que crear el archivo **package.json** donde almacenaremos las dependencias que nuestra aplicación necesitará para funcionar como tambien las dependencias de desarrollo y librerias.
+
+Para crear el package.json tenemos que inicializar nuestro proyecto con:
+
+` npm init`
+
+Al digitar el código anterior te preguntará una serie de cosas del proyecto, al completar todo los pasos se creará automaticamente un archivo package.json.
+
+Una de las preguntas será el nombre del **entry point**, este será el archivo desde donde se inicializará la app. ejemplo: **app.js**
+
+
+Cada una de las dependencias que instalemos para el proyecto quedarán escritas en nuestro package.json, este archivo se puede copiar para otro proyecto con las dependencias pertinentes. Ejemplo de instalación de cualquier dependencia:
+
+`npm install express --save`
+
+Se creará automaticamente la carpeta **node_modules** con la dependencia que instalamos, en este caso express.
+
+Si queremos instalar las dependencias en otro proyecto copiamos el archivo package.json a la carpeta de nuestro nuevo proyecto y por consola(ubicados en la carpeta nueva) digitamos lo siguiente:
+
+`npm install`
+
+Con esto instalaremos todas las dependencias que tengamos en el package.json y nos creará nuestra carpeta respectiva **node_modules** con las dependencias listas para utilizar.
 
 ## Modulo FileSystem
 
@@ -192,3 +226,5 @@ Un stream es un flujo de información o un flujo de datos, podemos leer un strea
 		})
 
 ```
+
+
