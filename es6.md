@@ -241,7 +241,8 @@ Las promesas nos devuelven un estado, con eso podemos jugar para ir utilizando n
 ### Metodos ES6 Map(), Filter(), Reduce()
 -------------------------------------------------
 
-### Filter para este ejemplo utilizaremos un arreglo de objetos. Filter nos 
+### Filter
+Para este ejemplo utilizaremos un arreglo de objetos llamado `animal`.
 
 ```js
 	// higher order function
