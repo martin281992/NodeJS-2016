@@ -235,9 +235,85 @@ Para utilizar las promesas requerimos la librería de **node_modules**
 			{
 				console.log(err);
 			})
-
-	
 ```
 Las promesas nos devuelven un estado, con eso podemos jugar para ir utilizando nuestros códigos y tener una mejor comprensión de sus estados, errores etc.
 
 ### Metodos ES6 Map(), Filter(), Reduce()
+-------------------------------------------------
+
+### Filter para este ejemplo utilizaremos un arreglo de objetos. Filter nos 
+
+```js
+	// higher order function
+	let animal = [
+		{name: 'Felipe', species:'human'},
+		{name: 'Francisco', species:'martian'},
+		{name: 'Martin', species:'allien'},
+		{name: 'Dilan', species:'ex-wife'}
+	]
+
+	// forma antigua de trabajar con array, objetos y funciones mezcladas
+
+	let dog = [];
+	for(let i = 0; i< animal.length; i++) {
+		if(animal[i].species === 'allien'){
+			dog.push(animal[i].name) 
+			console.log(dog)  // imprime martin
+		} // fin if
+	} // fin for
+
+	// higher order functions Filter
+
+	let dogs = animal.filter(function(data){ return data.species === 'allien'});
+	console.log(dogs);
+
+	// arrow F
+	let dogs2 = animal.filter((data)=> data.name === 'Francisco')
+	console.log(dogs2);
+
+```
+Filter recibe una función callback con la `data` del arreglo de objetos `animal` y en el **return** devolvemos la información que queremos filtrar del arreglo de objeto, es como el `if(animal[i].species === 'allien')` pero lo obviamos.
+
+### Map 
+A diferencia del Filter con el **Map** rescatamos del arreglo de objetos un parametro y creamos un nuevo arreglo con el resultado de la busqueda.
+
+```js
+	let names = animal.map(function(data) {return data.name })
+	// con su arrow function
+	let names2 = animal.map((data)=> data.species)
+
+	console.log(names);//nos devuelve un ARRAY de los nombres del array de objetos " animal"
+	console.log(names2);
+```
+### Reduce
+
+Reduce realiza una multiple task que explicaré en el código.
+
+```js
+
+	let object = [
+		{ cantidades: 200},
+		{ cantidades: 400},
+		{ cantidades: 100},
+		{ cantidades: 50}
+	]
+
+	let total = object.reduce(function(sum, order){ 
+		//sum es la operacion del acumulador de valores que vienen del REDUCE
+		//order es el objeto literal que se esta iterando.
+		console.log("La suma es:",sum, order);
+		return sum + order.cantidades;
+	}, 0)
+	console.log(total);
+
+	// o su shorthand
+
+	let total2 = object.reduce((sum, order)=>{
+		console.log("la suma es:",sum, order);
+		return sum + order.cantidades;
+	}, 0)
+
+	console.log(total2);
+```
+
+
