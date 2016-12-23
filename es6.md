@@ -288,7 +288,7 @@ A diferencia del Filter con el **Map** rescatamos del arreglo de objetos un para
 ```
 ### Reduce
 
-Reduce realiza una multiple task que explicaré en el código.
+Reduce realiza una multi-task que explicaré en el código.
 
 ```js
 
