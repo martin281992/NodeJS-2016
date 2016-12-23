@@ -99,7 +99,7 @@ Podemos ver la cantidad de elementos que tiene nuestro conjunto :
 
 Eliminar elementos de nuestro conjunto:
 
-noFun.delete("jesus");
+`noFun.delete("jesus");`
 
 Los conjuntos son parecidos a los maps porque son colecciones.
 
