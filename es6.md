@@ -14,24 +14,28 @@ Maneras de crear array en javascript
 
 ` let funfun = new Array('cat, 'dog', 'me');`
 
-``let fun = [];`
+`let fun = [];`
 
 
 Ingresar valores a nuestro array
 
-	`funfun.push('lion');`
+`funfun.push('lion');`
 
 Eliminar último elemento del array
 
-	`funfun.pop();`
+`funfun.pop();`
 
 Ordenar alfabetica los elementos del array
 	
-	`funfun.sort();`
+`funfun.sort();`
 
 Ver la cantidad de elementos que tenemos en nuestro array
 
-	`console.log(funfun.length)`
+`console.log(funfun.length)`
+
+### Re-asignar valores a nuestros arrays
+
+
 
 ### Set o conjuntos
 
@@ -60,10 +64,6 @@ Eliminar elementos de nuestro conjunto:
 noFun.delete("jesus");
 
 Los conjuntos son parecidos a los maps porque son colecciones.
-
-
-
-
 
 ### Arrow Fuction 
 
