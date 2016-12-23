@@ -4,7 +4,7 @@
 
 Para todos los casos prácticos estaré utilizando el estandar ES6 de javascript. En este apartado explicaré por arriba alguno de los cambios en código que aplicaré para cada uno de los ejercicios.
 
-### Variables
+### Variables de bloque
 
 Ya dejamos de lado la palabra reservada `var` ahora para las variables utilizaremos la que indica el estandar `Let` y `const`, donde **const** se aplicará a variables que su valor no se modificará, mientras que **let** la utilizaremos para las variables normales.
 
@@ -33,10 +33,48 @@ Ver la cantidad de elementos que tenemos en nuestro array
 
 `console.log(funfun.length)`
 
-### Re-asignar valores a nuestros arrays
+### Ciclo: for, while, do while
 
+El ciclo for se hace de la misma manera que en otros lenguajes.
 
+```js
 
+	for(let i = 0; i>array.length; i++){
+
+		// some code
+	}
+```
+
+**Tenemos otros tipos de for**
+
+Recorrer cualquier tipo de colección ya sea map de manera rápida pero sin condicionales.
+
+```js
+	let usual = new Array('eat', 'sleep', 'code');
+
+	for(let usual of usual){
+		console.log(usual);
+	}
+```
+
+**Ciclo while**
+
+```js
+	let dogLife = 4;
+	while(dogLife<10){
+		console.log(`la edad es ${dogLife} `);
+		dogLife++;
+	}
+```
+**Ciclo do while**
+
+```js
+	
+	let apple = 10;
+	do{
+		console.log(`ñom ñom eat all the apple ${apple}`);
+		}while(apple<2);
+```
 ### Set o conjuntos
 
 Un conjunto es una colección donde almacenamos valores, esos valores pueden iterarse. Los valores de un conjunto son valores únicos.
@@ -65,14 +103,39 @@ noFun.delete("jesus");
 
 Los conjuntos son parecidos a los maps porque son colecciones.
 
-### Arrow Fuction 
+### Funciones
 
+```js
+	function helloworld(giveMe){
+		console.log(`say hello ${giveMe}`);
+	}
+
+	helloworld("maxPower");
+
+```
+Podemos guardar funciones en variables de la siguiente manera:
+
+```js
+	let name = function(none){
+		console.log(`Hello ${none}`);
+	}
+	name("martin");
+```
 Ya no utilizaremos más la forma tradicional al crear una función o callback, ahora cada vez que creemos una funcíón utilizaremos una **arrow fuction**:
 
 ```js
 		let suma = (a,b) => a+b;
 		console.log("la suma es " + suma(5,5));
+```
 
+### Agregar parametros por Default en funciones
+
+```js
+		function human(name ="dex", age="22"){
+		console.log(`${name} and mi age is ${age}`);
+	}
+
+	human();
 ```
 
 ### N valores como parametros
